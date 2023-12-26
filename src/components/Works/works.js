@@ -1,20 +1,28 @@
 import React from 'react';
 import './works.css';
-import Portfolio1 from '../../assets/portfolio-1.png';
-import Portfolio2 from '../../assets/portfolio-2.png';
+import Hita from '../../assets/hita.png';
+import Plethora from '../../assets/plethora.png';
+import Git from '../../assets/github.png'
 
-const works = () => {
+
+const Works = () => {
+
+  
   return (
     <section id='works'>
       <h2 className='worksTitle'> My Portfolio </h2>
       <span className='worksDesc'> I take pride in paying attention to the smallest details and making sure that my work is pixel perfect. I am excited to bring my skills and experience to help businesses achieve their goals and create a strong online presence. </span>
       <div className='worksImgs'>
-        <img src={Portfolio1} className='worksImg'/>
-        <img src={Portfolio2} className='worksImg'/>
+        <img className='worksImg' src={Plethora} alt="Image 1" /><br></br>
+        <p className='worksDesc' style={{marginBottom: '2rem'}}>An ERP for Training and Placement activities in college.</p><br></br><br></br><br></br>
+        <img className='worksImg' src={Hita} alt="Image 2" />
+        <p className='worksDesc'>Real Estate Deals online at the comfort of your home.</p>
       </div>
-      <button className='worksBtn'>See More</button>
+      <a href='https://github.com/ayushmaandhar' target="_blank">
+        <button className='worksBtn'>See More </button>
+      </a>
     </section>
   )
 }
 
-export default works
+export default Works

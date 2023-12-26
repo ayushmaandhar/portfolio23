@@ -1,27 +1,41 @@
 import React from 'react'
 import './intro.css'
-import bg from './../../assets/image.png'
-import Me from './../../assets/myPhoto.png'
+import Me from './../../assets/itMe.png'
 import btnImg from './../../assets/hireme.png'
 import { Link } from 'react-scroll'
-const intro = () => {
+import { useTypewriter} from 'react-simple-typewriter'
+import { Cursor } from 'react-simple-typewriter'
+import ResumeDownloadButton from './resumeDownloadButton'
+
+
+const Intro = () => {
+
+  const [text] = useTypewriter({
+    words: ['Developer.', 'Designer.'],
+    loop: true,
+  });
+
   return (
     <section id='intro'>
       <div className='introContent'>
             <span className='hello'>Hello,</span>
             <span className='introText'>I'm
-                <span className='introName'> Ayushmaan </span><br/>
-                Website Designer
+                <span className='introName'> Ayushmaan, </span><br/>
+                Website 
+                <div style={{color: 'yellow'}}>
+                {text}<Cursor />
+                </div>
             </span>
             <p className='introPara' > 
-            I am a skilled web designer with experience in creating <br/> visually appealing and user friendly websites.
+            I am a skilled Web Developer with experience in creating <br/> Robust, Visually Appealing and User Friendly Websites.
             </p>
-
-            <Link>
+              <Link>
                 <button className='btn' >
                     <img className='btnImg' src={btnImg} />
                     Hire Me
                 </button>
+              &nbsp;
+            <ResumeDownloadButton/>
             </Link>
             
       </div>
@@ -30,4 +44,4 @@ const intro = () => {
   )
 }
 
-export default intro
+export default Intro
